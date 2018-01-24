@@ -5,8 +5,13 @@ import com.example.demo.Commands.CloseAccountCommand;
 import com.example.demo.Commands.CreateAccountCommand;
 import com.example.demo.Commands.DepositMoneyCommand;
 import com.example.demo.Commands.WithdrawMoneyCommand;
+import com.example.demo.Events.MoneyDepositedEvent;
+import com.example.demo.MyBean;
 import org.axonframework.commandhandling.gateway.CommandGateway;
+import org.axonframework.commandhandling.model.AggregateLifecycle;
 import org.axonframework.commandhandling.model.AggregateNotFoundException;
+import org.axonframework.eventsourcing.eventstore.DomainEventStream;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,6 +23,8 @@ import java.util.concurrent.CompletableFuture;
 public class AccountApi {
 
     private final CommandGateway commandGateway;
+    @Autowired
+    MyBean bean;
     public AccountApi(CommandGateway commandGateway){
         this.commandGateway=commandGateway;
     }

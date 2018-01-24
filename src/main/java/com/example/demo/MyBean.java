@@ -23,9 +23,4 @@ public class MyBean {
         this.mongo = mongo;
     }
 
-
-    public void example() {
-        DB db = mongo.getDb();
-    }
-
 }

@@ -10,4 +10,5 @@ public class AccountCreatedEvent {
         this.balance=balance;
 
     }
+
 }
