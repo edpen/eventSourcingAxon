@@ -1,10 +1,11 @@
-package com.example.demo.Query;
+package com.example.demo.query;
 
-import com.example.demo.EventType;
+import com.example.demo.enums.EventType;
 
-public class QueryDepositedEvent extends QueryEvent {
+public class QueryWithdrawnEvent extends QueryEvent {
     private double amount;
-    public QueryDepositedEvent(EventType eventType, String id,double amount) {
+
+    public QueryWithdrawnEvent(EventType eventType, String id, double amount) {
         super(eventType, id);
         this.amount=amount;
     }

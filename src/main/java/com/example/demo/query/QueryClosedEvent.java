@@ -1,6 +1,6 @@
-package com.example.demo.Query;
+package com.example.demo.query;
 
-import com.example.demo.EventType;
+import com.example.demo.enums.EventType;
 
 public class QueryClosedEvent extends QueryEvent {
 
